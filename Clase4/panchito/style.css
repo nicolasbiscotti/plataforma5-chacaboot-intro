@@ -1,0 +1,79 @@
+:root {
+  --center: 0 auto;
+
+  --sausage-width: 50vw;
+  --sausage-heigth: 65px;
+
+  --mustard-side: calc(var(--sausage-width) * 0.059);
+
+  --bread-with: 45vw;
+  --bread-heigth: 80px;
+  --bread-radius: 65px;
+
+  --bread-internal-border-width: 15px;
+  --bread-internal-border: var(--bread-internal-border-width) solid #b69768;
+  --bread-internal-border-radius: calc(
+    var(--bread-internal-border-width) * 1.2
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 10vh;
+}
+
+.sausage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.36vw;
+  overflow: hidden;
+
+  margin: var(--center);
+  width: var(--sausage-width);
+  background-color: #af0020;
+  height: var(--sausage-heigth);
+  border-radius: calc(var(--sausage-heigth) / 2);
+}
+
+.mustard {
+  width: var(--mustard-side);
+  height: var(--mustard-side);
+  rotate: 45deg;
+  
+  border-top: 8px solid moccasin;
+  border-left: 8px solid moccasin;
+  border-top-left-radius: 17px;  
+}
+.mustard-down {
+  width: var(--mustard-side);
+  height: var(--mustard-side);
+  rotate: 45deg;
+    
+  border-bottom: 8px solid moccasin;
+  border-right: 8px solid moccasin;
+  border-bottom-right-radius: 17px;
+}
+
+.bread {
+  margin: var(--center);
+  width: var(--bread-with);
+  background-color: #e1ba82;
+  height: var(--bread-heigth);
+  border-radius: var(--bread-radius);
+}
+
+.up {
+  border-bottom: var(--bread-internal-border);
+  border-bottom-left-radius: calc(var(--bread-internal-border-width) * 1.2);
+  border-bottom-right-radius: var(--bread-internal-border-radius);
+}
+
+.down {
+  border-top: var(--bread-internal-border);
+  border-top-left-radius: var(--bread-internal-border-radius);
+  border-top-right-radius: var(--bread-internal-border-radius);
+}

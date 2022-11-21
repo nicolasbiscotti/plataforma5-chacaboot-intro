@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Nicolás Biscotti</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#portfolio-section"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-section">Acerca de mi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-section">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section section-full-h section-p-10">
+      <div class="section">
+        <img
+          src="https://st3.depositphotos.com/1006318/15649/v/1600/depositphotos_156492214-stock-illustration-profile-icon-male-emotion-avatar.jpg"
+          alt="foto personal"
+          class="personal-photo"
+        />
+        <h1>Nicolás Biscotti</h1>
+        <h4>Desarrollador Web</h4>
+      </div>
+    </section>
+
+    <section
+      id="portfolio-section"
+      class="section section-full-h section-p-10 section-bg"
+    >
+      <div class="container">
+        <div class="row g-3">
+          <header>
+            <h2 class="portfolio-title">Portfolio</h2>
+          </header>
+
+          <hr />
+          <div class="col-sm-12 col-md-4">
+            <a href="#">
+              <img
+                class="rounded img-thumbnail portfolio-img"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.jH3TpzceHyx2t98FSL0Q1AHaEK%26pid%3DApi&f=1&ipt=2c679511985610aef5bdcaeef2316a3238602f47502d8c40b1fa237360f92877&ipo=images"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <a href="#">
+              <img
+                class="rounded img-thumbnail portfolio-img"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.atPyI3nfuuw530COCb8JbQHaE4%26pid%3DApi&f=1&ipt=ceeb9500cae5ae5a6efc42d17ae12cffaf98fbbc5c2f2b87bf9b965167eb94a6&ipo=images"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <a href="#">
+              <img
+                class="rounded img-thumbnail portfolio-img"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.plwJfD8VDijakR-MS6iy4QHaFZ%26pid%3DApi&f=1&ipt=77222485924a974c262a2bc68ab8495384b3efff5082d55c26eed0bae1817501&ipo=images"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-section" class="section section-full-h section-p-10 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-1 col-lg-2"></div>
+
+          <div class="col-sm-12 col-md-10 col-lg-8">
+            <header>
+              <h2>Acerca de mi</h2>
+            </header>
+            <hr />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+              velit voluptas tempore est illo cumque ullam aliquam, nesciunt
+              doloribus et totam aperiam? Qui fuga impedit dolore aspernatur
+              odit! Omnis, aut?
+            </p>
+          </div>
+
+          <div class="col-sm-12 col-md-1 col-lg-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact-section"
+      class="section section-full-h section-p-10 section-bg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-2"></div>
+          <div class="col-12 col-md-8">
+            <header>
+              <h2>Contactame</h2>
+            </header>
+
+            <hr />
+
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  class="form-control"
+                  id="nombre"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  Nunca compartiré tu email con nadie más.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input
+                  type="tel"
+                  name="telefono"
+                  class="form-control"
+                  id="telefono"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  name="mensaje"
+                  id="mensaje"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="col-12 col-md-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="section section-full-h">
+      <!-- <section> -->
+      <section class="contact-info section section-full-w text-center font-azure">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>DIRECCIÓN</h4>
+              <p>Tucumán 135</p>
+              <p>Chacabuco Bs As</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h4>EN LAS REDES</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="copyrigth section section-full-w text-center font-azure">
+        <div class="container">
+          <p>Copyright nicolas.biscotti.io 2022</p>
+        </div>
+      </section>
+      <!-- </section> -->
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

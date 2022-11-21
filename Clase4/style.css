@@ -1,0 +1,35 @@
+/* ¿Porque el margin del primer elemento dentro del body 
+    empuja al propio body hacia abajo?
+
+    For this problem see: collapsing margins.
+*/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  border: 3px solid black;
+
+  padding: 45px;
+
+  width: 5px;
+
+  text-align: center;
+}
+
+div {
+  border: 2px solid red;
+  border-left: 5px solid blue;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.uno {
+  width: 20vw;
+  margin-right: 5vw;
+  margin-left: 75vw;
+}
+.dos {
+  width: 200px;
+  height: 200px;
+}

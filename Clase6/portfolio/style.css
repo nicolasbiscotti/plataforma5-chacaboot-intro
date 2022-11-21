@@ -1,0 +1,74 @@
+/* 
+Regla general: 
+- PARA ALINEAR tags, crear un contenedor
+y decirle al contenedor que alinie
+a sus hijos. 
+*/
+
+/* SECTIONS COMMON STYLES */
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-full-h {
+  min-height: 100vh;
+}
+.section-full-w {
+  width: 100vw;
+}
+.section-p-10 {
+  /* 
+    los padding te dan espacio 
+    cuando el contenido de la seccion 
+    supera los 100vh 
+  */
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.section-bg {
+  background-color: tan;
+}
+.text-center {
+  text-align: center;
+}
+
+/* HEADER SECTION */
+.personal-photo {
+  width: 25vw; /* with relative */
+  min-width: 200px;
+  max-width: 350px;
+  margin-bottom: 0.5rem;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+/* PORTFOLIO SECTION */
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+.font-azure {
+  color: azure;
+}
+
+.contact-info {
+  background-color: #2f3e52;
+  height: 90vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.copyrigth {
+  background-color: #1f2833;
+  height: 10vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+footer .copyrigth p {
+  margin: 0;
+}
