@@ -1,9 +1,10 @@
-/* 
-Regla general: 
-- PARA ALINEAR tags, crear un contenedor
-y decirle al contenedor que alinie
-a sus hijos. 
-*/
+/**************************************
+  Regla general: 
+  - PARA ALINEAR tags, crear un contenedor
+    y decirle al contenedor que alinie
+    a sus hijos. 
+
+*****************************************/
 
 /* SECTIONS COMMON STYLES */
 .section {
