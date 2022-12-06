@@ -6,7 +6,7 @@
 
 *****************************************/
 
-/* SECTIONS COMMON STYLES */
+/* UTILITIES CLASSES STYLES */
 .section {
   display: flex;
   flex-direction: column;
@@ -34,6 +34,9 @@
 .text-center {
   text-align: center;
 }
+.font-azure {
+  color: azure;
+}
 
 /* HEADER SECTION */
 .personal-photo {
@@ -52,10 +55,6 @@
 }
 
 /* FOOTER */
-.font-azure {
-  color: azure;
-}
-
 .contact-info {
   background-color: #2f3e52;
   height: 90vh;
