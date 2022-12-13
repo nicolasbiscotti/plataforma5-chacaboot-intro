@@ -10,10 +10,8 @@ body {
   background-color: burlywood;
   margin: 5px;
   border-radius: 10%;
-  transition: 0.5s;
-  -webkit-transition: backgraund: 0.05s;
-  -moz-transition: backgraund: 0.05s;
-} 
+  transition: 0.75s;
+}
 
 .container {
   max-width: 600px;

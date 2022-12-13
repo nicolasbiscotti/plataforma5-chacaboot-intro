@@ -2,32 +2,75 @@ let bodyColor = "rgb(0, 100, 0)";
 
 let title = selectElement("h1");
 let squares = selectAllElements(".square");
+let squaresContainer = selectElement("#squares-container");
 let colorDisplay = selectElement("#colorDisplay");
 let message = selectElement("#message");
-let playAgain = selectElement("#reset");
+let playAgainButton = selectElement("#reset");
+let easyButton = selectElement("#easyButton");
+let hardButton = selectElement("#hardButton");
 
 let clickedColor = null;
-
 let colors;
 let pickedColor;
+let gameMode = 6;
+
+playAgainButton.addEventListener("click", reset);
+easyButton.addEventListener("click", selectMode);
+hardButton.addEventListener("click", selectMode);
 
 reset();
-playAgain.addEventListener("click", reset);
 
 function reset(event) {
-  colors = generateRandomColors(6);
+  removeChildren(squaresContainer);
+
+  colors = generateRandomColors(gameMode);
   pickedColor = pickColor();
-  colorDisplay.textContent = pickedColor;
-  console.log(pickedColor);
+  setText(colorDisplay, pickedColor);
+
+  setText(message, "");
+  setText(playAgainButton, "New Colors");
   setColor(title, bodyColor);
+
   drawSquares();
+  console.log(pickedColor);
 }
 
+function selectMode(event) {
+  let mode = event.target.textContent;
+  if (mode.toLowerCase() === "easy") {
+    easyButton.setAttribute("class", "selected");
+    hardButton.setAttribute("class", "");
+    gameMode = 3;
+  } else {
+    easyButton.setAttribute("class", "");
+    hardButton.setAttribute("class", "selected");
+    gameMode = 6;
+  }
+  reset();
+}
+
+// function paintSquares() {
+//   console.log(squares);
+//   for (let index = 0; index < squares.length; index++) {
+//     setColor(squares[index], colors[index]);
+//     squares[index].addEventListener("click", checkColor);
+//   }
+// }
+
 function drawSquares() {
-  console.log(squares);
-  for (let index = 0; index < squares.length; index++) {
-    setColor(squares[index], colors[index]);
-    squares[index].addEventListener("click", checkColor);
+  for (let index = 0; index < gameMode; index++) {
+    let square = document.createElement("div");
+    square.className = "square";
+    setColor(square, colors[index]);
+    square.addEventListener("click", checkColor);
+    squaresContainer.appendChild(square);
+  }
+  console.log(squaresContainer);
+}
+
+function removeChildren(element) {
+  while (element.firstChild) {
+    element.removeChild(element.lastChild);
   }
 }
 
@@ -36,10 +79,11 @@ function checkColor(event) {
   clickedColor = selectedSquare.style.backgroundColor;
   console.log(clickedColor, pickedColor);
   if (clickedColor.split(" ").join("") !== pickedColor.split(" ").join("")) {
-    message.textContent = "Intentalo Nuevamente";
+    setText(message, "Intentalo Nuevamente");
     setColor(selectedSquare, bodyColor);
   } else {
-    message.textContent = "¡Correcto!";
+    setText(message, "¡Correcto!");
+    setText(playAgainButton, "Play Again");
     setColor(title, pickedColor);
     changeColors(pickedColor);
   }
@@ -50,18 +94,16 @@ function generateRandomColors(size) {
   for (let i = 0; i < size; i++) {
     colors[i] = randomColor();
   }
+  console.log(colors);
   return colors;
 }
 
 function randomColor() {
-  let r = randomNumber(255);
-  let g = randomNumber(255);
-  let b = randomNumber(255);
-  return `rgb(${r},${g},${b})`;
+  return `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)})`;
 }
 
 function pickColor() {
-  let index = randomNumber(5);
+  let index = randomNumber(gameMode - 1);
   console.log(index);
   return colors[index];
 }
@@ -78,13 +120,17 @@ function randomNumber(until) {
 }
 
 function changeColors(color) {
-  for (let index = 0; index < squares.length; index++) {
-    squares[index].style.backgroundColor = color;
+  for (let index = 0; index < gameMode; index++) {
+    setColor(squaresContainer.childNodes[index], color);
   }
 }
 
 function setColor(element, color) {
   element.style.backgroundColor = color;
+}
+
+function setText(element, text) {
+  element.textContent = text;
 }
 
 function selectElement(selector) {
