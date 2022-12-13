@@ -1,0 +1,40 @@
+body {
+  background-color: darkgreen;
+}
+
+.square {
+  float: left;
+  width: 30%;
+  height: 0;
+  padding-bottom: 30%;
+  background-color: burlywood;
+  margin: 5px;
+  border-radius: 10%;
+  transition: 0.5s;
+  -webkit-transition: backgraund: 0.05s;
+  -moz-transition: backgraund: 0.05s;
+} 
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+#message {
+  color: white;
+}
+
+#stripe {
+  background-color: grey;
+  height: 30px;
+  text-align: center;
+}
+
+.selected {
+  background-color: red;
+}
