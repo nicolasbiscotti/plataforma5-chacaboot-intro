@@ -1,7 +1,7 @@
 let bodyColor = "rgb(0, 100, 0)";
 
 let title = selectElement("h1");
-let squares = selectAllElements(".square");
+
 let squaresContainer = selectElement("#squares-container");
 let colorDisplay = selectElement("#colorDisplay");
 let message = selectElement("#message");
@@ -48,14 +48,6 @@ function selectMode(event) {
   }
   reset();
 }
-
-// function paintSquares() {
-//   console.log(squares);
-//   for (let index = 0; index < squares.length; index++) {
-//     setColor(squares[index], colors[index]);
-//     squares[index].addEventListener("click", checkColor);
-//   }
-// }
 
 function drawSquares() {
   for (let index = 0; index < gameMode; index++) {

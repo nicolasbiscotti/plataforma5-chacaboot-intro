@@ -1,0 +1,71 @@
+body {
+  background-color: rgb(27, 49, 82);
+  font-family: "Courier New", Courier, monospace;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-top: 2rem;
+}
+.input {
+  width: 450px;
+  height: 50px;
+  margin: 5px;
+  padding: 0px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+}
+.boton-agregar {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(255, 6, 46);
+  color: white;
+}
+.boton-agregar:hover {
+  opacity: 0.9;
+}
+.item {
+  margin-bottom: 10px;
+}
+.item-input {
+  width: 350px;
+  height: 50px;
+  padding: 0 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  background: none;
+}
+.boton-editar {
+  margin: 0 5px;
+  border: none;
+  background: none;
+  color: #62d0ff;
+  font-size: 1.4rem;
+  font-family: Montserrat, sans-serif;
+}
+.boton-remover {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 6, 46);
+  font-size: 20px;
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+.container {
+  display: grid;
+  place-content: center;
+}
